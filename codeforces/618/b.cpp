@@ -10,17 +10,23 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    int n;
+    cin >> n;
+    vector<int> bil;
+    rep(i,2*n){
+        int x;
+        cin >> x;
+        bil.pb(x);
+    }
+    sort(bil.begin(),bil.end());
+    int min1 = INT16_MAX;
+    for(int i = 0;i<2*n;i+=2){
+        int hsl = abs(bil[i/2] - bil[(i+2*n)/2]);
+        deb(hsl);
+        min1 = min(min1,hsl);
+    }
+    cout << min1 << endl;
 }
-
 int main(){
     int tc;
     cin >> tc;

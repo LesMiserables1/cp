@@ -9,22 +9,26 @@ using namespace std;
 #define deb(x) cout << #x << " = " << x <<'\n'
 typedef long long ll;
 
-void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
-}
-
 int main(){
+    int n,m;
+    string s[21],t[21];
+    cin >> n >> m;
+    loop(i,1,n){
+        cin >> s[i];
+        if(i == n)
+        s[0] = s[i];
+    }
+    loop(i,1,m){
+        cin >> t[i];
+        if(i == m)
+        t[0] = t[i];
+    }
     int tc;
     cin >> tc;
     while(tc--){
-        solve();
+        int q;
+        cin >> q;
+        cout << s[q%n] << t[q%m] << endl;
     }
+
 }

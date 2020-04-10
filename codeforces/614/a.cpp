@@ -9,18 +9,23 @@ using namespace std;
 #define deb(x) cout << #x << " = " << x <<'\n'
 typedef long long ll;
 
-void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+void binser(ll l, ll r){
+    if(r >= l){
+        ll mid = l + (r-l)/2;
+    
+    }
 }
+void solve(){
+    ll n;
+    int s,k;
+    cin >> n >> s >> k;
+    rep(i,0){
+        int x;
+        cin >> x;
+        rs[x] = 0;
+    }
 
+}
 int main(){
     int tc;
     cin >> tc;

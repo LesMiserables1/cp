@@ -10,17 +10,18 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    string st;
+    cin >> st;
+    char* endptr = NULL;
+    ll x = strtoll(st.c_str(),&endptr,10);
+    ll jml = 0;
+    rep(i,st.length()){
+        jml += (x/10) * 10;
+        x = x/10 + x%10;
+    }
+    jml += x;
+    cout << jml << "\n";
 }
-
 int main(){
     int tc;
     cin >> tc;

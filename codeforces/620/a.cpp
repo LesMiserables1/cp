@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 #define pb push_back
@@ -10,21 +9,18 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    ll x,y,a,b;
+    cin >> x >> y >> a >> b;
+    abs(x-y) % (a+b) == 0 ? cout << abs(x-y) / (a+b) : cout << -1;
+    cout << endl;
 }
-
 int main(){
     int tc;
     cin >> tc;
-    while(tc--){
-        solve();
-    }
+    // while(tc--){
+        for(int i = 0; i < 10;++i){
+            cout << i << endl;
+        }
+        // solve();
+    // }
 }

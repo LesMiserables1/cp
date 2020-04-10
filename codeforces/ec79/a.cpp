@@ -7,24 +7,21 @@ using namespace std;
 #define rep(i,n)  for (int i = 0; i < n; i++)
 #define loop(i,a,n)  for (int i = a; i <= n; i++)
 #define deb(x) cout << #x << " = " << x <<'\n'
-typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    long long r,g,b;
+    cin >> r >> g >> b;
+    long long max1 = max(max(r,g),b);
+    long long jmh = r + g + b;
+    max1 < (jmh-max1)+2 ? cout << "YES\n" : cout << "NO\n";
+    
 }
-
 int main(){
     int tc;
     cin >> tc;
-    while(tc--){
+    while (tc--)
+    {
         solve();
     }
+    
 }

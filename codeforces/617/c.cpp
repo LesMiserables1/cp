@@ -10,15 +10,12 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    int n;
+    cin >> n;
+    string st;
+    cin >> st;
+    
+    
 }
 
 int main(){

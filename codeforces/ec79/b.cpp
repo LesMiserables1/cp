@@ -8,23 +8,25 @@ using namespace std;
 #define loop(i,a,n)  for (int i = a; i <= n; i++)
 #define deb(x) cout << #x << " = " << x <<'\n'
 typedef long long ll;
-
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    ll n,s;
+    cin >> n >> s;
+    int max = 0;
+    rep(i,n){
+        int x;
+        cin >> x;
+        s -= x;
+        if()
+        if(max < x)
+            max = i;
+    }
 }
-
 int main(){
     int tc;
     cin >> tc;
-    while(tc--){
+    while (tc--)
+    {
         solve();
     }
+    
 }

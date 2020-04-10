@@ -10,17 +10,19 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    ll a,len;
+    string b;
+    cin >> a >> b;
+    len = b.length();
+    string st = "";
+    rep(i,len)
+        st += '9';
+    ll n = stoll(b);
+    ll m = stoll(st);
+    if(n == m)
+        len++;
+    cout << a*(len-1) << endl;
 }
-
 int main(){
     int tc;
     cin >> tc;

@@ -10,17 +10,17 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
+    int arr[4],n;
+    int max1 = 0;
+    rep(i,3){
+        cin >> arr[i];
+        max1 = max(max1,arr[i]);
+    }
+    cin >> n;
+    int hasil = n - (max1-arr[0] + max1-arr[1] + max1-arr[2]);
+    hasil%3 == 0 && hasil >= 0 ? cout << "YES" : cout << "NO";
+    cout << "\n";
 }
-
 int main(){
     int tc;
     cin >> tc;

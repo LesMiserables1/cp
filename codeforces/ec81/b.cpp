@@ -10,17 +10,25 @@ using namespace std;
 typedef long long ll;
 
 void solve(){
-    ll a,b,c,r,prc;
-    cin >> a >> b >> c >> r;
-    if(a>b)  
-        swap(a,b);
-    ll lft = max(a,c-r);
-    ll rgt = min(b,c+r);
-    rgt -= lft;
-    rgt = max(0ll,rgt);
-    cout << (b-a)-rgt << '\n';
-}
+    ll n,g,b;
+    cin >> n >> g >> b;
+    ll hsl = min(n,g);
+    ll temp = n;
+    n -= g;
+    if(n > 0){
 
+        if(n >= (temp-temp/2)){
+            n -= temp/2;
+            hsl += n*b + n*g;
+        }else{
+            n -= b;
+            hsl += b;
+            if(n > 0)
+                hsl += g;
+        }
+    }
+    cout << hsl << endl;
+}
 int main(){
     int tc;
     cin >> tc;
