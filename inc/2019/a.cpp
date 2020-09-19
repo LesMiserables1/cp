@@ -12,8 +12,23 @@ typedef long long ll;
 int main(){
     int n;
     cin >> n;
-    int arr[101];
+    
+    int a[101];
+    int b[101];
+
     for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+        cin >> a[i];
     }
+    for(int i = 0; i < n; ++i){
+        cin >> b[i];
+    }
+    int rs = 0;
+    for(int i = 0; i < n; ++i){
+        if(a[i] > b[i]){
+            rs += 3;
+        }else if(a[i] == b[i]){
+            rs ++;
+        }
+    }
+    cout << rs << endl;
 }

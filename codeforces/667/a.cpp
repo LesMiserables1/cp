@@ -10,10 +10,13 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[101];
-    for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+    int tc; cin >> tc;
+    while(tc--){
+        ll a,b;
+        cin >> a >> b;
+        
+        (abs(a-b)%10 == 0)  ? cout << abs(a-b)/10 : cout << abs(a-b)/10 + 1;
+        cout << endl;
+         
     }
 }

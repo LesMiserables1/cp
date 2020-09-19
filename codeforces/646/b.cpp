@@ -10,10 +10,15 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[101];
-    for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+    int T; cin >> T;
+    stack<char> st;
+    while(T--){
+        string st;
+        cin >> st;
+        for(char i : st){
+            cout << i << endl;
+        }
+        
+        // cout << res << endl;
     }
 }

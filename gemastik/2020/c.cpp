@@ -12,8 +12,22 @@ typedef long long ll;
 int main(){
     int n;
     cin >> n;
-    int arr[101];
     for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+        int p,q,m;
+        cin >> p >> q >> m;
+
+        while(m > 0){
+            if(p > q){
+                p /= 2;
+            }else{
+                q /= 2;
+            }
+            m--;
+        }
+        if(p > q)
+        cout << p << " " << q << endl;
+        else
+        cout << q << " " << p << endl;
+
     }
 }

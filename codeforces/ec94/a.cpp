@@ -10,10 +10,17 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[101];
-    for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+    int tc; cin >> tc;
+    while(tc--){
+        int n;
+        string st;
+        cin >> n;
+        cin >> st;
+
+        string rs = "";
+        for(int i = 0; i < st.size(); i += 2){
+            rs += st[i];
+        }
+        cout << rs << endl;
     }
 }

@@ -10,10 +10,12 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[101];
-    for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+    int tc;
+    cin >> tc;
+    while(tc--){
+        int a,b;
+        cin >> a >> b;
+        int res = min((a+b)/3,min(a,b));
+        cout << res << endl;
     }
 }

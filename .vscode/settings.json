@@ -74,7 +74,11 @@
         "socket.h": "c",
         "unistd.h": "c",
         "types.h": "c",
-        "in.h": "c"
+        "in.h": "c",
+        "any": "cpp",
+        "bit": "cpp",
+        "charconv": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.dimInactiveRegions": true
 }

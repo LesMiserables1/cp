@@ -10,10 +10,14 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    int n;
-    cin >> n;
-    int arr[101];
-    for(int i = 0; i < n; ++i){
-        cin >> arr[i];
+    vector<vector<int>> num;
+
+    for(int i = 0; i < 5; ++i){
+        vector<int> idx;
+        for(int j = 0; j < 5; ++j){
+            idx.pb(j);
+        }
+        num.pb(idx);
     }
+    cout << num.size();
 }
